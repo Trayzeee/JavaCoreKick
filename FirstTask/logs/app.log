@@ -1,0 +1,41 @@
+2025-11-12 15:52:21.599 INFO  [main] ArrayExampleFactoryImpl - Array created, contains 5 elements
+2025-11-12 15:52:21.605 INFO  [main] ArrayExampleFactoryImpl - Array: [6, -7, 3, 2, 0]
+2025-11-12 15:52:35.923 INFO  [main] ArrayExampleFactoryImpl - Array created, contains 5 elements
+2025-11-12 15:52:35.923 INFO  [main] ArrayExampleFactoryImpl - Array: [6, -7, 3, 2, 0]
+2025-11-12 15:53:18.739 INFO  [main] ArrayExampleFactoryImpl - Array created, contains 5 elements
+2025-11-12 15:53:18.739 INFO  [main] ArrayExampleFactoryImpl - Array: [6, -7, 3, 2, 0]
+2025-11-12 15:53:26.435 INFO  [main] ArrayExampleFactoryImpl - Array created, contains 5 elements
+2025-11-12 15:53:26.450 INFO  [main] ArrayExampleFactoryImpl - Array: [6, -7, 3, 2, 0]
+2025-11-12 15:53:26.466 INFO  [main] ArrayServiceImpl - Array updated: element 18 was set to position 0
+2025-11-12 15:53:26.466 INFO  [main] ArrayServiceImpl - Array: [18, -7, 3, 2, 0]
+2025-11-12 16:05:59.318 INFO  [main] ArrayExampleFactoryImpl - Array created, contains 5 elements
+2025-11-12 16:05:59.318 INFO  [main] ArrayExampleFactoryImpl - Array: [6, -7, 3, 2, 0]
+2025-11-12 16:07:53.369 INFO  [main] ArrayExampleFactoryImpl - Array created, contains 4 elements
+2025-11-12 16:07:53.369 INFO  [main] ArrayExampleFactoryImpl - Array: [6, -7, 3, 2]
+2025-11-12 16:08:26.825 INFO  [main] ArrayExampleFactoryImpl - Array created, contains 4 elements
+2025-11-12 16:08:26.831 INFO  [main] ArrayExampleFactoryImpl - Array: [6, -7, 3, 2]
+2025-11-12 16:13:23.269 INFO  [main] ArrayExampleFactoryImpl - Array created, contains 4 elements
+2025-11-12 16:13:23.273 INFO  [main] ArrayExampleFactoryImpl - Array: [6, -7, 3, 2]
+2025-11-12 16:13:23.297 INFO  [main] ArrayServiceImpl - Array updated: element 18 was set to position 0
+2025-11-12 16:13:23.297 INFO  [main] ArrayServiceImpl - Array: [18, -7, 3, 2]
+2025-11-12 16:20:52.677 INFO  [main] ArrayExampleFactoryImpl - Array created, contains 4 elements
+2025-11-12 16:20:52.677 INFO  [main] ArrayExampleFactoryImpl - Array: [6, -7, 3, 2, 0]
+2025-11-12 16:20:52.694 INFO  [main] ArrayServiceImpl - Array updated: element 18 was set to position 0
+2025-11-12 16:20:52.694 INFO  [main] ArrayServiceImpl - Array: [18, -7, 3, 2, 0]
+2025-11-12 16:24:23.693 INFO  [main] ArrayExampleFactoryImpl - Array created, contains 5 elements
+2025-11-12 16:24:23.693 INFO  [main] ArrayExampleFactoryImpl - Array: [6, -7, 3, 2, 0]
+2025-11-12 16:24:23.709 INFO  [main] ArrayServiceImpl - Array updated: element 18 was set to position 0
+2025-11-12 16:24:23.709 INFO  [main] ArrayServiceImpl - Array: [18, -7, 3, 2, 0]
+2025-11-12 18:12:01.014 INFO  [main] ArrayExampleFactoryImpl - Array created, contains 7 elements
+2025-11-12 18:12:01.014 INFO  [main] ArrayExampleFactoryImpl - Array: [2, -11, 5, 8, 3, 14, 7]
+2025-11-12 18:29:31.497 INFO  [main] ArrayExampleFactoryImpl - Array created, contains 7 elements
+2025-11-12 18:29:31.513 INFO  [main] ArrayExampleFactoryImpl - Array: [2, -11, 5, 8, 3, 14, 7]
+2025-11-12 18:32:32.207 INFO  [main] ArrayExampleFactoryImpl - Array created, contains 7 elements
+2025-11-12 18:32:32.207 INFO  [main] ArrayExampleFactoryImpl - Array: [2, -11, 5, 8, 3, 14, 7]
+2025-11-12 18:39:37.687 INFO  [main] ArrayExampleFactoryImpl - Array created, contains 7 elements
+2025-11-12 18:39:37.687 INFO  [main] ArrayExampleFactoryImpl - Array: [2, -11, 5, 8, 3, 14, 7]
+2025-11-12 18:42:59.717 INFO  [main] ArrayExampleFactoryImpl - Array created, contains 7 elements
+2025-11-12 18:42:59.717 INFO  [main] ArrayExampleFactoryImpl - Array: [2, -11, 5, 8, 3, 14, 7]
+2025-11-12 18:42:59.733 INFO  [main] ArrayExampleFactoryImpl - Testing gnome sort...
+2025-11-12 18:42:59.744 INFO  [main] ArrayExampleFactoryImpl - Testing shell sort...
+2025-11-12 18:42:59.744 INFO  [main] ArrayExampleFactoryImpl - Testing shell sort...
