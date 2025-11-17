@@ -1,12 +1,14 @@
 package com.kondratiev.ft.service.impl.sortserviceimpl;
 
-import com.kondratiev.ft.entity.ArrayExample;
+import com.kondratiev.ft.entity.CustomArray;
 import com.kondratiev.ft.service.SortService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class InsertionSort implements SortService {
-
+  private static final Logger log = LogManager.getLogger();
   @Override
-  public ArrayExample sort(ArrayExample array) {
+  public CustomArray sort(CustomArray array) {
     int[] newData = array.getData();
     int size = array.getSize();
 
@@ -22,6 +24,7 @@ public class InsertionSort implements SortService {
       newData[j + 1] = x;
     }
     array.setData(newData);
+    log.info("Array sorted using insertion sort: {}", array.getData());
     return array;
   }
 }

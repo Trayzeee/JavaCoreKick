@@ -1,38 +1,40 @@
 package com.kondratiev.ft.entity;
 
-
 import com.kondratiev.ft.exception.CustomException;
+import com.kondratiev.ft.observer.CustomArrayObservable;
+
 import java.util.Arrays;
 
-public class ArrayExample {
+public class CustomArray implements CustomArrayObservable {
+  private long arrayId;
   private int[] data;
   private int size;
+  private CustomArrayObservable observer;
 
-  public ArrayExample(int size, int[] data) throws CustomException {
+  public CustomArray(long arrayId, int size, int[] data) throws CustomException {
     if (data == null) {
       throw new CustomException("Data is empty!");
     }
     if (size <= 0) {
       throw new CustomException("Size value has to be positive!");
     }
-    if (size != data.length) {
       if (size > data.length) {
         throw new CustomException("Size must be equal to array length! " + (size - data.length) + " element(s) are missing!");
       }
-      else {
+      if (size < data.length) {
         throw new CustomException("Size must be equal to array length! " + (data.length - size) + " element(s) are extra!");
       }
-    }
+    this.arrayId = arrayId;
     this.size = size;
-    this.data = Arrays.copyOf(data, data.length);
+    this.data = Arrays.copyOf(data, size);
   }
 
   public int[] getData() {
-    return data;
+    return Arrays.copyOf(data, size);
   }
 
   public void setData(int[] data) {
-    this.data = data;
+    this.data = Arrays.copyOf(data, size);
   }
 
   public int getSize() {
@@ -43,11 +45,44 @@ public class ArrayExample {
     this.size = size;
   }
 
+  public long getArrayId() {
+    return arrayId;
+  }
+
+  public void setArrayId(long arrayId) {
+    this.arrayId = arrayId;
+  }
+
+  @Override
+  public void addObserver(CustomArrayObservable observer) throws CustomException {
+    if (observer == null) {
+      throw new CustomException("Adding null observer isn't allowed!");
+    }
+    this.observer = observer;
+  }
+
+  @Override
+  public void removeObserver(CustomArrayObservable observer) {
+    this.observer = null;
+  }
+
+  @Override
+  public void notifyObserver() throws CustomException {
+    if (observer == null) {
+      throw new CustomException("");
+    }
+    observer.updateArray(this);
+  }
+
+  @Override
+  public void updateArray(CustomArray array) {
+  }
+
   @Override
   public boolean equals(Object o) {
     if (o == null || getClass() != o.getClass()) return false;
 
-    ArrayExample that = (ArrayExample) o;
+    CustomArray that = (CustomArray) o;
     return size == that.size && Arrays.equals(data, that.data);
   }
 
@@ -66,4 +101,5 @@ public class ArrayExample {
     sb.append('}');
     return sb.toString();
   }
+
 }

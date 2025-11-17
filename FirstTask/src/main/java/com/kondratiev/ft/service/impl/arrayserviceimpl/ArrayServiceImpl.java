@@ -1,6 +1,7 @@
 package com.kondratiev.ft.service.impl.arrayserviceimpl;
 
-import com.kondratiev.ft.entity.ArrayExample;
+import com.kondratiev.ft.entity.CustomArray;
+import com.kondratiev.ft.exception.CustomException;
 import com.kondratiev.ft.service.ArrayService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -8,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 public class ArrayServiceImpl implements ArrayService {
   private static final Logger log = LogManager.getLogger(ArrayServiceImpl.class);
   @Override
-  public int findMaxElement(ArrayExample array) {
+  public int findMaxElement(CustomArray array) {
 
     int[] data = array.getData();
     int size = array.getSize();
@@ -24,7 +25,7 @@ public class ArrayServiceImpl implements ArrayService {
   }
 
   @Override
-  public int findMinElement(ArrayExample array) {
+  public int findMinElement(CustomArray array) {
 
     int[] data = array.getData();
     int size = array.getSize();
@@ -40,7 +41,7 @@ public class ArrayServiceImpl implements ArrayService {
   }
 
   @Override
-  public void substituteElement(ArrayExample array, int element, int pos) {
+  public void substituteElement(CustomArray array, int element, int pos) {
 
     int[] data = array.getData();
     int size = array.getSize();
@@ -53,7 +54,7 @@ public class ArrayServiceImpl implements ArrayService {
   }
 
   @Override
-  public double calculateAverage(ArrayExample array) {
+  public double calculateAverage(CustomArray array) {
 
     int[] data = array.getData();
     int size = array.getSize();
@@ -69,7 +70,7 @@ public class ArrayServiceImpl implements ArrayService {
   }
 
   @Override
-  public int calculateSum(ArrayExample array) {
+  public int calculateSum(CustomArray array) {
 
     int[] data = array.getData();
     int size = array.getSize();
@@ -83,7 +84,7 @@ public class ArrayServiceImpl implements ArrayService {
   }
 
   @Override
-  public int calculateQuantityOfNegativeElements(ArrayExample array) {
+  public int calculateQuantityOfNegativeElements(CustomArray array) {
 
     int[] data = array.getData();
     int size = array.getSize();
@@ -100,7 +101,7 @@ public class ArrayServiceImpl implements ArrayService {
   }
 
   @Override
-  public int calculateQuantityOfPositiveElements(ArrayExample array) {
+  public int calculateQuantityOfPositiveElements(CustomArray array) throws CustomException {
 
     int[] data = array.getData();
     int size = array.getSize();

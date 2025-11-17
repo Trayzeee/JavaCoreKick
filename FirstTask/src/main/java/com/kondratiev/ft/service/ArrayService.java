@@ -1,21 +1,22 @@
 package com.kondratiev.ft.service;
 
-import com.kondratiev.ft.entity.ArrayExample;
+import com.kondratiev.ft.entity.CustomArray;
+import com.kondratiev.ft.exception.CustomException;
 
 public interface ArrayService
 {
-   int findMaxElement (ArrayExample array);
+   int findMaxElement (CustomArray array) throws CustomException;
 
-   int findMinElement (ArrayExample array);
+   int findMinElement (CustomArray array) throws CustomException;
 
-   void substituteElement (ArrayExample array, int element, int pos);
+   void substituteElement (CustomArray array, int element, int pos) throws CustomException;
 
-   double calculateAverage (ArrayExample array);
+   double calculateAverage (CustomArray array) throws CustomException;
 
-   int calculateSum (ArrayExample array);
+   int calculateSum (CustomArray array) throws CustomException;
 
-   int calculateQuantityOfNegativeElements (ArrayExample array);
+   int calculateQuantityOfNegativeElements (CustomArray array) throws CustomException;
 
-   int calculateQuantityOfPositiveElements (ArrayExample array);
+   int calculateQuantityOfPositiveElements (CustomArray array) throws CustomException;
 
 }

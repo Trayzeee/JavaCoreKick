@@ -1,11 +1,14 @@
 package com.kondratiev.ft.service.impl.sortserviceimpl;
 
-import com.kondratiev.ft.entity.ArrayExample;
+import com.kondratiev.ft.entity.CustomArray;
 import com.kondratiev.ft.service.SortService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class GnomeSort implements SortService {
+  private static final Logger log = LogManager.getLogger();
   @Override
-  public ArrayExample sort(ArrayExample array) {
+  public CustomArray sort(CustomArray array) {
     int[] newData = array.getData();
     int size = array.getSize();
 
@@ -23,6 +26,7 @@ public class GnomeSort implements SortService {
           }
         }
     array.setData(newData);
+    log.info("Array sorted using gnome sort: {}", array.getData());
     return array;
   }
 }

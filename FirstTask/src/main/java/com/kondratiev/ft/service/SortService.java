@@ -1,7 +1,7 @@
 package com.kondratiev.ft.service;
 
-import com.kondratiev.ft.entity.ArrayExample;
+import com.kondratiev.ft.entity.CustomArray;
 
 public interface SortService {
-  ArrayExample sort(ArrayExample array);
+  CustomArray sort(CustomArray array);
 }

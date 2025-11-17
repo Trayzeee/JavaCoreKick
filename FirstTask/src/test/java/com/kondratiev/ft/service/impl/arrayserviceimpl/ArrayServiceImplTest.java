@@ -1,8 +1,10 @@
 package com.kondratiev.ft.service.impl.arrayserviceimpl;
 
-import com.kondratiev.ft.entity.ArrayExample;
+import com.kondratiev.ft.entity.CustomArray;
 import com.kondratiev.ft.exception.CustomException;
 import com.kondratiev.ft.factory.impl.ArrayExampleFactoryImpl;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
@@ -11,10 +13,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class ArrayServiceImplTest {
 
   ArrayExampleFactoryImpl factory = new ArrayExampleFactoryImpl();
-  ArrayExample array = factory.create(5, new int[]{4, 8, 7, 1, 0});
+  CustomArray array = factory.create(1, 5, new int[]{4, 8, 7, 1, 0});
   ArrayServiceImpl service = new ArrayServiceImpl();
 
   final int MIN_VALUE = -7;
+
   final int MAX_VALUE = 6;
   final double AVERAGE = 0.8;
   final int SUM = 4;
@@ -22,6 +25,16 @@ class ArrayServiceImplTest {
   final int POSITIVE_ELEMENTS_QUANTITY = 3;
 
   ArrayServiceImplTest() throws CustomException {}
+
+  @BeforeEach
+  void setUp() {
+
+  }
+
+  @AfterEach
+  void tearDown() {
+
+  }
 
   @Test
   void findMaxElement() {
@@ -61,14 +74,14 @@ class ArrayServiceImplTest {
   }
 
   @Test
-  void calculateQuantityOfNegativeElements() {
+  void calculateQuantityOfNegativeElements() throws CustomException{
     int expected = NEGATIVE_ELEMENTS_QUANTITY;
     int actual = service.calculateQuantityOfNegativeElements(array);
     assertEquals(expected, actual);
   }
 
   @Test
-  void calculateQuantityOfPositiveElements() {
+  void calculateQuantityOfPositiveElements() throws CustomException {
     int expected = POSITIVE_ELEMENTS_QUANTITY;
     int actual = service.calculateQuantityOfPositiveElements(array);
     assertEquals(expected, actual);
