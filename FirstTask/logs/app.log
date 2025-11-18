@@ -1,5 +1,0 @@
-2025-11-17 18:55:37.288 INFO  [main] ArrayExampleFactoryImpl - Array created, contains 7 elements
-2025-11-17 18:55:37.299 INFO  [main] ArrayExampleFactoryImpl - Array: [2, -11, 5, 8, 3, 14, 7]
-2025-11-17 18:55:37.315 INFO  [main] GnomeSort - Array sorted using gnome sort: [-11, 2, 3, 5, 7, 8, 14]
-2025-11-17 18:55:37.318 INFO  [main] ShellSort - Array sorted using shell sort: [-11, 2, 3, 5, 7, 8, 14]
-2025-11-17 18:55:37.318 INFO  [main] InsertionSort - Array sorted using insertion sort: [-11, 2, 3, 5, 7, 8, 14]
