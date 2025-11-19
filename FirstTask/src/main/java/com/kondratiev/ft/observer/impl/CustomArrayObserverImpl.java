@@ -2,14 +2,14 @@ package com.kondratiev.ft.observer.impl;
 
 import com.kondratiev.ft.entity.CustomArray;
 import com.kondratiev.ft.exception.CustomException;
-import com.kondratiev.ft.observer.CustomArrayObservable;
-import com.kondratiev.ft.service.impl.arrayserviceimpl.ArrayServiceImpl;
+import com.kondratiev.ft.observer.CustomArrayObserver;
+import com.kondratiev.ft.service.impl.ArrayServiceImpl;
 import com.kondratiev.ft.stats.CustomArrayStats;
 import com.kondratiev.ft.warehouse.CustomArrayWarehouse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class CustomArrayObservableImpl implements CustomArrayObservable {
+public class CustomArrayObserverImpl implements CustomArrayObserver {
   private static final Logger log = LogManager.getLogger();
 
   @Override
@@ -34,18 +34,5 @@ public class CustomArrayObservableImpl implements CustomArrayObservable {
       log.error("An error occured while operating array {}: {}",
               array.getArrayId(), e.getMessage());
     }
-
-  }
-
-  @Override
-  public void addObserver(CustomArrayObservable observer) {
-  }
-
-  @Override
-  public void removeObserver(CustomArrayObservable observer) {
-  }
-
-  @Override
-  public void notifyObserver() {
   }
 }

@@ -1,4 +1,4 @@
-package com.kondratiev.ft.service.impl.sortserviceimpl;
+package com.kondratiev.ft.service.impl;
 
 import com.kondratiev.ft.entity.CustomArray;
 import com.kondratiev.ft.service.SortService;
@@ -10,11 +10,10 @@ public class GnomeSort implements SortService {
   @Override
   public CustomArray sort(CustomArray array) {
     int[] newData = array.getData();
-    int size = array.getSize();
 
         int i = 1;
 
-        while (i < size) {
+        while (i < newData.length) {
           if (i == 0 || newData[i - 1] <= newData[i]) {
             i++;
           }

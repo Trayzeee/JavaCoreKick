@@ -1,5 +1,6 @@
 package com.kondratiev.ft.parser.impl;
 
+import com.kondratiev.ft.exception.CustomException;
 import com.kondratiev.ft.parser.CustomArrayParser;
 import com.kondratiev.ft.validator.impl.CustomArrayValidatorImpl;
 import org.apache.logging.log4j.LogManager;
@@ -12,18 +13,13 @@ public class CustomArrayParserImpl implements CustomArrayParser {
   private static final Logger log = LogManager.getLogger();
 
   @Override
-  public int[] parseToArray(List<String> linesFromFile) {
+  public int[] parseToArray(String lineFromFile) throws CustomException {
     CustomArrayValidatorImpl validator = new CustomArrayValidatorImpl();
     List<Integer> buffer = new ArrayList<>();
 
-    for (String line : linesFromFile) {
-      if (line == null) {
-        continue;
-      }
-      String stripped = line.strip();
+      String stripped = lineFromFile.strip();
       if (!validator.isLineValid(stripped)) {
-        log.warn("Skipped invalid line: {}", line);
-        continue;
+        throw new CustomException("Invalid line: " + lineFromFile);
       }
 
       String[] tokens = stripped.split(DATA_SPLIT_REGEX);
@@ -33,7 +29,6 @@ public class CustomArrayParserImpl implements CustomArrayParser {
         }
         buffer.add(Integer.parseInt(t));
       }
-    }
 
     int[] result = new int[buffer.size()];
     for (int i = 0; i < buffer.size(); i++) {

@@ -24,9 +24,9 @@ public class CustomArrayReaderImpl implements CustomArrayReader {
         throw new CustomException("File not found: " + path);
       }
       Path filePath = Path.of(resource.toURI());
-      List<String> lines = Files.readAllLines(filePath, StandardCharsets.UTF_8);
-      log.info("File '{}' read successfully, {} lines", path, lines.size());
-      return lines;
+      List<String> readFile = Files.readAllLines(filePath, StandardCharsets.UTF_8);
+      log.info("File '{}' read successfully, {} lines", path, readFile.size());
+      return readFile;
     } catch (IOException | URISyntaxException e) {
       throw new CustomException("IO problem while reading file " + path, e);
     }

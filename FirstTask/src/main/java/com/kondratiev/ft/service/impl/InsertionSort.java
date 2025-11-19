@@ -1,4 +1,4 @@
-package com.kondratiev.ft.service.impl.sortserviceimpl;
+package com.kondratiev.ft.service.impl;
 
 import com.kondratiev.ft.entity.CustomArray;
 import com.kondratiev.ft.service.SortService;
@@ -10,9 +10,8 @@ public class InsertionSort implements SortService {
   @Override
   public CustomArray sort(CustomArray array) {
     int[] newData = array.getData();
-    int size = array.getSize();
 
-    for (int i = 1; i < size; i++) {
+    for (int i = 1; i < newData.length; i++) {
 
       int x = newData[i];
       int j = i - 1;

@@ -30,7 +30,6 @@ public class ArrayRepository {
       }
 
       logger.debug("Custom array added to repository: {}",customArray);
-      customArray.notifyObserver();
       arrays.add(customArray);
     }
 
@@ -44,12 +43,17 @@ public class ArrayRepository {
     }
 
     public List<CustomArray> sort() throws UnsupportedOperationException {
-       // TO DO
+       // TODO
        return List.of();
     }
 
     public List<CustomArray> query() throws UnsupportedOperationException {
-       // TO DO
+       // TODO
+      return List.of();
+    }
+
+    public List<CustomArray> findAll() throws UnsupportedOperationException {
+      // TODO
       return List.of();
     }
 }

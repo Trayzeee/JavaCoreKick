@@ -1,4 +1,4 @@
-package com.kondratiev.ft.service.impl.sortserviceimpl;
+package com.kondratiev.ft.service.impl;
 
 import com.kondratiev.ft.entity.CustomArray;
 import com.kondratiev.ft.service.SortService;
@@ -11,10 +11,9 @@ public class ShellSort implements SortService {
   public CustomArray sort(CustomArray array) {
       final int[] GAPS = {701, 301, 132, 57, 23, 10, 4, 1};
       int[] newData = array.getData();
-      int size = array.getSize();
 
         for (int gap : GAPS) {
-          for (int i = gap; i < size; i++) {
+          for (int i = gap; i < newData.length; i++) {
             int x = newData[i];
             int j = i;
             while (j >= gap && newData[j - gap] > x) {

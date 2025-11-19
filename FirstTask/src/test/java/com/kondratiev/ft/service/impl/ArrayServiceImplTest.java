@@ -1,4 +1,4 @@
-package com.kondratiev.ft.service.impl.arrayserviceimpl;
+package com.kondratiev.ft.service.impl;
 
 import com.kondratiev.ft.entity.CustomArray;
 import com.kondratiev.ft.exception.CustomException;
@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ArrayServiceImplTest {
 
   ArrayExampleFactoryImpl factory = new ArrayExampleFactoryImpl();
-  CustomArray array = factory.create(1, 5, new int[]{4, 8, 7, 1, 0});
+  CustomArray array = factory.create(1,  new int[]{4, 8, 7, 1, 0});
   ArrayServiceImpl service = new ArrayServiceImpl();
 
   final int MIN_VALUE = -7;

@@ -1,4 +1,4 @@
-package com.kondratiev.ft.service.impl.arrayserviceimpl;
+package com.kondratiev.ft.service.impl;
 
 import com.kondratiev.ft.entity.CustomArray;
 import com.kondratiev.ft.exception.CustomException;
@@ -12,10 +12,9 @@ public class ArrayServiceImpl implements ArrayService {
   public int findMaxElement(CustomArray array) {
 
     int[] data = array.getData();
-    int size = array.getSize();
     int maxElement = data[0];
 
-    for (int i = 1; i < size; i++) {
+    for (int i = 1; i < data.length; i++) {
       if (maxElement < data[i]) {
         maxElement = data[i];
       }
@@ -28,10 +27,9 @@ public class ArrayServiceImpl implements ArrayService {
   public int findMinElement(CustomArray array) {
 
     int[] data = array.getData();
-    int size = array.getSize();
     int minElement = data[0];
 
-    for (int i = 1; i < size; i++) {
+    for (int i = 1; i < data.length; i++) {
       if (minElement > data[i]) {
         minElement = data[i];
       }
@@ -44,11 +42,9 @@ public class ArrayServiceImpl implements ArrayService {
   public void substituteElement(CustomArray array, int element, int pos) {
 
     int[] data = array.getData();
-    int size = array.getSize();
     data[pos] = element;
 
     array.setData(data);
-    array.setSize(size);
     log.info("Array updated: element {} was set to position {}", element, pos);
     log.info("Array: {}", array.getData());
   }
@@ -57,10 +53,9 @@ public class ArrayServiceImpl implements ArrayService {
   public double calculateAverage(CustomArray array) {
 
     int[] data = array.getData();
-    int size = array.getSize();
     double sum = 0, count = 0, average;
 
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < data.length; i++) {
       sum += data[i];
       count++;
     }
@@ -73,10 +68,9 @@ public class ArrayServiceImpl implements ArrayService {
   public int calculateSum(CustomArray array) {
 
     int[] data = array.getData();
-    int size = array.getSize();
     int sum = 0;
 
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < data.length; i++) {
       sum += data[i];
     }
 
@@ -87,10 +81,9 @@ public class ArrayServiceImpl implements ArrayService {
   public int calculateQuantityOfNegativeElements(CustomArray array) {
 
     int[] data = array.getData();
-    int size = array.getSize();
     int quantity = 0;
 
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < data.length; i++) {
 
       if (data[i] < 0) {
         quantity++;
@@ -104,10 +97,9 @@ public class ArrayServiceImpl implements ArrayService {
   public int calculateQuantityOfPositiveElements(CustomArray array) throws CustomException {
 
     int[] data = array.getData();
-    int size = array.getSize();
     int quantity = 0;
 
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < data.length; i++) {
       if (data[i] > 0) {
         quantity++;
       }

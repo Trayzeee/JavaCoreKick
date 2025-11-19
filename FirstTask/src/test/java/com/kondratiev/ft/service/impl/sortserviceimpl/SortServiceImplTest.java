@@ -3,6 +3,9 @@ package com.kondratiev.ft.service.impl.sortserviceimpl;
 import com.kondratiev.ft.entity.CustomArray;
 import com.kondratiev.ft.exception.CustomException;
 import com.kondratiev.ft.factory.impl.ArrayExampleFactoryImpl;
+import com.kondratiev.ft.service.impl.GnomeSort;
+import com.kondratiev.ft.service.impl.InsertionSort;
+import com.kondratiev.ft.service.impl.ShellSort;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SortServiceImplTest {
 
   ArrayExampleFactoryImpl factory = new ArrayExampleFactoryImpl();
-  CustomArray array = factory.create(2,7, new int[]{2, -11, 5, 8, 3, 14, 7});
+  CustomArray array = factory.create(2, new int[]{2, -11, 5, 8, 3, 14, 7});
   CustomArray actual;
 
   ShellSort shellSortService = new ShellSort();
