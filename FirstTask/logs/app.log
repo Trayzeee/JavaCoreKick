@@ -1,6 +1,0 @@
-2025-11-19 08:33:29.505 INFO  [main] CustomArrayParserImpl - Parser finished: 5 numbers
-2025-11-19 08:33:41.114 WARN  [main] CustomArrayParserImpl - Invalid line: 1  , 4, 8, 2. -14
-2025-11-19 08:33:56.635 INFO  [main] CustomArrayParserImpl - Parser finished: 5 numbers
-2025-11-19 08:34:10.194 WARN  [main] CustomArrayParserImpl - Invalid line: 1  , x, 8, 2, -14
-2025-11-19 08:37:14.847 INFO  [main] CustomArrayParserImpl - Parser finished: 5 numbers
-2025-11-19 08:37:37.204 INFO  [main] CustomArrayParserImpl - Parser finished: 5 numbers
