@@ -36,6 +36,10 @@ public class CustomArray implements CustomArrayObservable {
     this.arrayId = arrayId;
   }
 
+  public int getLength() {
+    return data.length;
+  }
+
   @Override
   public void addObserver(CustomArrayObserver observer) {
     this.observer = observer;
