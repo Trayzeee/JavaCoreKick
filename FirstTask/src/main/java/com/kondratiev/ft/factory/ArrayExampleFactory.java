@@ -4,5 +4,5 @@ import com.kondratiev.ft.entity.CustomArray;
 import com.kondratiev.ft.exception.CustomException;
 
 public interface ArrayExampleFactory {
-  CustomArray create(long arrayId, int[] data) throws CustomException;
+  CustomArray create(int arrayId, int[] data) throws CustomException;
 }

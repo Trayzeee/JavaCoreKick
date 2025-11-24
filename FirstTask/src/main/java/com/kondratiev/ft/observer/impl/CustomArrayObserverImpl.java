@@ -4,7 +4,7 @@ import com.kondratiev.ft.entity.CustomArray;
 import com.kondratiev.ft.exception.CustomException;
 import com.kondratiev.ft.observer.CustomArrayObserver;
 import com.kondratiev.ft.service.impl.ArrayServiceImpl;
-import com.kondratiev.ft.stats.CustomArrayStats;
+import com.kondratiev.ft.entity.CustomArrayStatistics;
 import com.kondratiev.ft.warehouse.CustomArrayWarehouse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,7 +18,7 @@ public class CustomArrayObserverImpl implements CustomArrayObserver {
     ArrayServiceImpl service = new ArrayServiceImpl();
 
     try {
-      CustomArrayStats arrayStats = new CustomArrayStats(
+      CustomArrayStatistics arrayStats = new CustomArrayStatistics(
               service.findMinElement(array),
               service.findMaxElement(array),
               service.calculateAverage(array),
@@ -26,12 +26,10 @@ public class CustomArrayObserverImpl implements CustomArrayObserver {
               service.calculateQuantityOfNegativeElements(array),
               service.calculateQuantityOfPositiveElements(array)
       );
-
       wareHouse.put(array.getArrayId(), arrayStats);
-
       log.info("Parameters of array {} have been updated successfully", array.getArrayId());
     } catch (CustomException e) {
-      log.error("An error occured while operating array {}: {}",
+      log.error("An error occurred while operating array {}: {}",
               array.getArrayId(), e.getMessage());
     }
   }

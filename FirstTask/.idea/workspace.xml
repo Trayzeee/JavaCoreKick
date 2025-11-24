@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0de99682-91f3-4539-9ed3-45118e59fb60" name="Changes" comment="CustomException class modified">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/comparator/CustomArrayComparatorImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/specification/CustomArraySpecification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/specification/impl/AvgLessThanSpecification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/specification/impl/IdSpecification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/specification/impl/SumGreaterThanSpecification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/kondratiev/ft/warehouse/CustomArrayWarehouseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/entity/CustomArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/entity/CustomArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/factory/ArrayExampleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/factory/ArrayExampleFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/factory/impl/ArrayExampleFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/factory/impl/ArrayExampleFactoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/observer/impl/CustomArrayObserverImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/observer/impl/CustomArrayObserverImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/parser/CustomArrayParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/parser/CustomArrayParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/parser/impl/CustomArrayParserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/parser/impl/CustomArrayParserImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/repository/ArrayRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/repository/ArrayRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/stats/CustomArrayStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/entity/CustomArrayStatistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/validator/CustomArrayValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/validator/CustomArrayValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/validator/impl/CustomArrayValidatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/validator/impl/CustomArrayValidatorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/warehouse/CustomArrayWarehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kondratiev/ft/warehouse/CustomArrayWarehouse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +33,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -59,6 +76,7 @@
     "JUnit.CustomArrayParserImplTest.parseToArray.executor": "Debug",
     "JUnit.CustomArrayReaderImplTest.readFromFile.executor": "Run",
     "JUnit.CustomArrayValidatorImplTest.isLineValid.executor": "Run",
+    "JUnit.CustomArrayWareHouseTest.testPut.executor": "Run",
     "JUnit.SortServiceImplTest.sort.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -84,30 +102,14 @@
       <recent name="com.kondratiev.ft.service.impl.arrayserviceimpl" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.kondratiev.ft.warehouse" />
       <recent name="com.kondratiev.ft.validator.impl" />
       <recent name="com.kondratiev.ft.parser.impl" />
       <recent name="com.kondratiev.ft.reader.impl" />
       <recent name="com.kondratiev.ft.service.impl.sortserviceimpl" />
-      <recent name="com.kondratiev.ft.service.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomArrayValidatorImplTest.isLineValid">
-    <configuration name="ArrayServiceImplTest.substituteElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FirstTask" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kondratiev.ft.service.impl.arrayserviceimpl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.kondratiev.ft.service.impl.arrayserviceimpl" />
-      <option name="MAIN_CLASS_NAME" value="com.kondratiev.ft.service.impl.arrayserviceimpl.ArrayServiceImplTest" />
-      <option name="METHOD_NAME" value="substituteElement" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.CustomArrayWareHouseTest.testPut">
     <configuration name="CustomArrayParserImplTest.parseToArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FirstTask" />
       <extension name="coverage">
@@ -156,6 +158,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CustomArrayWareHouseTest.testPut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FirstTask" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kondratiev.ft.warehouse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kondratiev.ft.warehouse" />
+      <option name="MAIN_CLASS_NAME" value="com.kondratiev.ft.warehouse.CustomArrayWareHouseTest" />
+      <option name="METHOD_NAME" value="testPut" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SortServiceImplTest.sort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FirstTask" />
       <extension name="coverage">
@@ -174,11 +192,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CustomArrayWareHouseTest.testPut" />
         <item itemvalue="JUnit.CustomArrayValidatorImplTest.isLineValid" />
         <item itemvalue="JUnit.CustomArrayParserImplTest.parseToArray" />
         <item itemvalue="JUnit.CustomArrayReaderImplTest.readFromFile" />
         <item itemvalue="JUnit.SortServiceImplTest.sort" />
-        <item itemvalue="JUnit.ArrayServiceImplTest.substituteElement" />
       </list>
     </recent_temporary>
   </component>

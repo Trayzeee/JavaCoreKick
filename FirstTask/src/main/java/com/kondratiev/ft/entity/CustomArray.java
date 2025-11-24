@@ -7,11 +7,11 @@ import com.kondratiev.ft.observer.CustomArrayObserver;
 import java.util.Arrays;
 
 public class CustomArray implements CustomArrayObservable {
-  private long arrayId;
+  private int arrayId;
   private int[] data;
   private CustomArrayObserver observer;
 
-  public CustomArray(long arrayId, int[] data) throws CustomException {
+  public CustomArray(int arrayId, int[] data) throws CustomException {
     if (data == null) {
       throw new CustomException("Data is empty!");
     }
@@ -26,13 +26,16 @@ public class CustomArray implements CustomArrayObservable {
 
   public void setData(int[] data) {
     this.data = Arrays.copyOf(data, data.length);
+    if (observer != null) {
+      observer.updateArray(this);
+    }
   }
 
-  public long getArrayId() {
+  public int getArrayId() {
     return arrayId;
   }
 
-  public void setArrayId(long arrayId) {
+  public void setArrayId(int arrayId) {
     this.arrayId = arrayId;
   }
 

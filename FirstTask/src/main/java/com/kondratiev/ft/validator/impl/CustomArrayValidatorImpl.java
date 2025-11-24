@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class CustomArrayValidatorImpl implements CustomArrayValidator {
   private static final Logger log = LogManager.getLogger();
-  private static final Pattern pattern = Pattern.compile(LINE_FROM_FILE_REGEX);
+  private static final Pattern pattern = Pattern.compile(LINE_FROM_ARRAY_FILE_REGEX);
 
   @Override
   public boolean isLineValid(String stringToValidate) {

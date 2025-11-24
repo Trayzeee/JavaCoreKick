@@ -1,0 +1,4 @@
+2025-11-25 00:09:54.753 INFO  [main] CustomArrayWarehouse - return stats of array with id: 1
+2025-11-25 00:10:31.208 INFO  [main] CustomArrayWarehouse - Statistics of array with id: 1
+2025-11-25 00:16:16.934 INFO  [main] CustomArrayWarehouse - Statistics of array with id: 1
+2025-11-25 00:16:16.958 INFO  [main] CustomArrayWarehouse - {1=CustomArrayStatistics[min=1, max=10, avg=5.5, sum=22, positiveNumbers=2, negativeNumbers=1]}

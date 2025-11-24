@@ -10,10 +10,11 @@ public class ArrayExampleFactoryImpl implements ArrayExampleFactory {
   private static final Logger log = LogManager.getLogger();
 
   @Override
-  public CustomArray create(long arrayId, int[] data) throws CustomException {
+  public CustomArray create(int arrayId, int[] data) throws CustomException {
     CustomArray result = new CustomArray(arrayId, data);
     log.info("Array created, contains {} elements", data.length);
     log.info("Array: {}", result.getData());
     return result;
   }
+
 }

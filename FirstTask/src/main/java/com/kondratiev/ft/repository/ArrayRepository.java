@@ -2,11 +2,13 @@ package com.kondratiev.ft.repository;
 
 import com.kondratiev.ft.entity.CustomArray;
 import com.kondratiev.ft.exception.CustomException;
+import com.kondratiev.ft.specification.CustomArraySpecification;
 import com.kondratiev.ft.warehouse.CustomArrayWarehouse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class ArrayRepository {
@@ -42,18 +44,33 @@ public class ArrayRepository {
       arrays.remove(customArray);
     }
 
-    public List<CustomArray> sort() throws UnsupportedOperationException {
-       // TODO
-       return List.of();
+    public List<CustomArray> sort(Comparator<? super CustomArray> comparator) {
+       logger.info("Called a method for sorting arrays");
+       List<CustomArray> sorted = new ArrayList<>(arrays);
+       sorted.sort(comparator);
+       return sorted;
     }
 
-    public List<CustomArray> query() throws UnsupportedOperationException {
-       // TODO
-      return List.of();
+  public List<CustomArray> query(CustomArraySpecification specification) throws CustomException {
+    logger.info("Starting query operation with specification: {}",
+            specification != null ? specification.getClass().getSimpleName() : "null");
+
+    List<CustomArray> result = new ArrayList<>();
+
+    if (specification == null) {
+      return result;
     }
 
-    public List<CustomArray> findAll() throws UnsupportedOperationException {
-      // TODO
-      return List.of();
+    for (CustomArray arr : arrays) {
+      try {
+        if (specification.specify(arr)) {
+          result.add(arr);
+        }
+      } catch (CustomException e) {
+        throw new CustomException(e);
+      }
     }
+    return result;
+  }
+
 }

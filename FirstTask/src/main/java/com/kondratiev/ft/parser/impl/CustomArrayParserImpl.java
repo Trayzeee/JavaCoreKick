@@ -22,7 +22,7 @@ public class CustomArrayParserImpl implements CustomArrayParser {
         throw new CustomException("Invalid line: " + lineFromFile);
       }
 
-      String[] tokens = stripped.split(DATA_SPLIT_REGEX);
+      String[] tokens = stripped.split(DATA_FROM_FILE_SPLIT_REGEX);
       for (String t : tokens) {
         if (t.isEmpty()) {
           continue;
